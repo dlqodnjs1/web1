@@ -3,19 +3,24 @@
 <head>
 <title>WEB1 - CSS</title>
 <meta charset="utf-8">
-<style>
-  a {
-    color:orange;
-    text-decoration: none;
-  }
-  h1{
-    font-size:45px;
-    text-align: center;
-  }
-</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="color.js"></script>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 <h1><a href="index.html">WEB</a></h1>
+<input type="button" value="night" onclick="
+  document.querySelector('body').style.backgroundColor = 'black';
+    document.querySelector('body').style.color = 'white';
+  ">
+<input type="button" value="day" onclick="
+  document.querySelector('body').style.backgroundColor = 'white';
+    document.querySelector('body').style.color = 'black';
+  ">
+  <input id="night_day" type="button" value="night" onclick="
+     nightDayHandler(this);
+      ">
+<div id="grid">
 <ol>
   <li><a href="1.html">HTML</a></li>
   <li><a href="2.html" style="color:red;text-decoration:underline">CSS</a></li>
@@ -29,28 +34,15 @@
   <li><a href="3.html"><font color="red">JavaScript</font></a></li>
 </ol>
 -->
-<h2>CSS</h2>
-안녕 css를 여기에 할려구해
-<p>
-  <div id="disqus_thread"></div>
-  <script>
-      /**
-      *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-      *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
-      /*
-      var disqus_config = function () {
-      this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
-      this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-      };
-      */
-      (function() { // DON'T EDIT BELOW THIS LINE
-      var d = document, s = d.createElement('script');
-      s.src = 'https://web1-jvltivoopt.disqus.com/embed.js';
-      s.setAttribute('data-timestamp', +new Date());
-      (d.head || d.body).appendChild(s);
-      })();
-  </script>
-  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-</p>
+ <div id="article">
+  <h2>CSS</h2>
+  <p>안녕 css를 여기에 할려구해three months later when I got a call from the family asking me to finish the
+  album. I remember, before that call came in, being on a flight and listening
+  to music with my phone on airplane mode. It could only play certain things in
+  the library, and at some point the working tracks for a couple of the songs
+</P>
+ </div>
+</div>
+
 </body>
 </html>

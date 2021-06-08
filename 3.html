@@ -3,6 +3,7 @@
 <head>
 <title>WEB1 - JavaScript</title>
 <meta charset="utf-8">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <style>
   a{
     color: black;
@@ -14,41 +15,111 @@
   .saw{
     color: gray;
   }
-  h1{
-    text-align: center;
-    font-size: 45px;
+  #ex1{
+    font-weight: bolder;
   }
 </style>
+<link rel="stylesheet" href="style.css">
+<script>
+
+   var Body = {
+     setColor:function (color){
+       //document.querySelector('body').style.color = color;
+       $('body').css('color', color);
+     },
+     setBackgroundColor:function (color){
+       //document.querySelector('body').style.backgroundColor = color;
+       $('body').css('backgroundColor', color);
+     }
+   }
+   var Links = {
+     setColor:function LinksSetColor(color){
+       var alist = document.querySelectorAll('a');
+       var i = 0;
+       while(i < alist.length){
+           alist[i].style.color = color;
+           i = i + 1;
+         }
+     }
+   }
+
+   function nightDayHandler(self){
+    var target = document.querySelector('body');
+     if (self.value === 'night'){
+      Body.setBackgroundColor('black');
+         Body.setColor('white');
+        self.value = 'day';
+
+        Links.setColor('powderblue');
+
+     } else {
+      Body.setBackgroundColor('white');
+         Body.setColor('black');
+        self.value = 'night';
+
+      Links.setColor('blue');
+      }
+    }
+</script>
 </head>
 <body>
-<h1><a href="index.html">WEB</a></h1>
-<h2>JavaScript</h2>
-<ol>
-  <li><a href="1.html">HTML</a></li>
-  <li><a href="2.html" class="saw">CSS</a></li>
-  <li><a href="3.html" class="saw" id="active">JavaScript</a></li>
-</ol>
-안녕 여기에 JavaScript를 할려구해
+  <h1><a href="index.html">WEB</a></h1>
+  <input id="night_day" type="button" value="night" onclick="
+     if (document.querySelector('#night_day').value === 'night'){
+      document.querySelector('body').style.backgroundColor = 'black';
+        document.querySelector('body').style.color = 'white';
+        document.querySelector('#night_day').value = 'day';
+     } else {
+      document.querySelector('body').style.backgroundColor = 'white';
+        document.querySelector('body').style.color = 'black';
+        document.querySelector('#night_day').value = 'night';
+      }
+      ">
+  <div id="grid">
+    <ol>
+      <li><a href="1.html">HTML</a></li>
+      <li><a href="2.html" class="saw">CSS</a></li>
+      <li><a href="3.html" class="saw" id="active">JavaScript</a></li>
+    </ol>
+   <div id="article">
+    <h2>JavaScript</h2>
+안녕 여기에 <span id="ex1">JavaScript</span>를 할려구해
+“Why does everybody need me to stay?” Mac Miller asks on the first single from his latest release. He answered his own question with the superb posthumous “Circles.”Miller’s 12-track album is heartbreakingly sublime, a portrait of a wry and honest musician acknowledging his demons but looking past them. “I’m here to make it all better with a little music for you,” he sings.Miller died of an accidental drug overdose in 2018 at 26 and was working on “Circles” as a sort of companion album to his Grammy-nominated “Swimming.”Producer Jon Brion, who worked on “Swimming” and also produced for Kanye West and Dido, was asked to finish Miller’s work.“Circles” shares the appealing confessional lyrics of “Swimming” but is more airy, more muted and understated. Miller was always an idiosyncratic artist, mixing hip-hop beats and samples with soul and warm funk, even jazz. Here, he is low-key, moody, spacey and anesthetized.He sings more than he raps. There’s nothing flashy. Everything’s thoughfful.
+   </div>
+  </div>
+  <input type="button" value="night" onclick="
+    var target = document.querySelector('body');
+     if (this.value === 'night'){
+      target.style.backgroundColor = 'black';
+        target.style.color = 'white';
+        this.value = 'day';
+
+        var alist = document.querySelectorAll('a');
+        var i = 0;
+        while(i < alist.length){
+            alist[i].style.color = 'powderblue';
+            i = i + 1;
+        }
+
+     } else {
+      target.style.backgroundColor = 'white';
+        target.style.color = 'black';
+        this.value = 'night';
+
+        var alist = document.querySelectorAll('a');
+        var i = 0;
+        while(i < alist.length){
+            alist[i].style.color = 'blue';
+            i = i + 1;
+        }
+
+     }
+     ">
+     <input id="night_day" type="button" value="night" onclick="
+        nightDayHandler(this);
+         ">
+         <input id="night_day" type="button" value="night" onclick="
+            nightDayHandler(this);
+             ">
 </body>
 </html>
-<p>
-  <div id="disqus_thread"></div>
-  <script>
-      /**
-      *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-      *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
-      /*
-      var disqus_config = function () {
-      this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
-      this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-      };
-      */
-      (function() { // DON'T EDIT BELOW THIS LINE
-      var d = document, s = d.createElement('script');
-      s.src = 'https://web1-jvltivoopt.disqus.com/embed.js';
-      s.setAttribute('data-timestamp', +new Date());
-      (d.head || d.body).appendChild(s);
-      })();
-  </script>
-  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-</p>

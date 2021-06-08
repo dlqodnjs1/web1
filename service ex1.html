@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <script src="color.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>방방곡곡</title>
+  </head>
+  <style>
+  a{
+    color: gray;
+    text-decoration: none;
+  }
+  body{
+    margin:0;
+  }
+  h1{
+   font-size:60px;
+   text-align:center;
+   margin: 0px;
+   border-bottom: 4px solid gray;
+   color:gray;
+ }
+  #grid{
+    border-right: 5px solid gray;
+    width: 150px;
+    margin: 0px;
+    padding-top:10px;
+    padding-left:20px;
+  }
+  #grid{
+   display: grid;
+   grid-template-columns: 150px 1fr;
+ }
+  #article{
+    padding-left:63px;
+  }
+  #back{
+    background-color: ivory;
+
+  }
+  </style>
+  <body>
+    <h1>방방곡곡</h1>
+    <div id="grid">
+    <span id="back">
+      <input id="night_day" type="button" value="night" onclick="
+         nightDayHandler(this);
+          "><br>
+      지역
+      <br>건의사항
+      <br>사장님의 추천
+    </span>
+     <div id="article">
+      방방곡곡dkajdkas <br>asdasdadsd dsadsadasdsadas
+     </div>
+    </div>
+  </body>
+</html>

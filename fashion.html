@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <script src="color.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>coordination fashion mall</title>
+<style>
+  a{
+    color: gray;
+    text-decoration: none;
+  }
+  body{
+    margin:0;
+  }
+  h1{
+   font-size:60px;
+   text-align:center;
+   margin: 0px;
+   border-bottom: 4px solid gray;
+   color:gray;
+ }
+  #grid ul{
+    border-right: 5px solid gray;
+    width: 150px;
+    margin: 0px;
+    padding-top:10px;
+    padding-left:20px;
+  }
+  #grid{
+   display: grid;
+   grid-template-columns: 150px 1fr;
+ }
+  #article{
+    padding-left:225px;
+  }
+  .ex{
+    padding-left:100px;
+  }
+  body{
+    background-color:#E1F5FE;
+  }
+  .js{
+    font-weight: bolder;
+  }
+  #deactive{
+    text-decoration: line-through;
+  }
+</style>
+  </head>
+  <body>
+    <h1>coordination fashion</h1>
+  <div id="grid">
+    <ul>
+      <input id="night_day" type="button" value="night" onclick="
+         if (document.querySelector('#night_day').value === 'night'){
+          document.querySelector('body').style.backgroundColor = 'black';
+            document.querySelector('body').style.color = 'white';
+            document.querySelector('#night_day').value = 'day';
+         } else {
+          document.querySelector('body').style.backgroundColor = '#E1F5FE';
+            document.querySelector('body').style.color = 'black';
+            document.querySelector('#night_day').value = 'night';
+          }
+          ">
+          <input id="night_day" type="button" value="night" onclick="
+             nightDayHandler(this);
+              "><br>
+    <span class="js">
+      <li><a href="http://platinummgt.co.kr/product/moeka/91/category/1/display/3/">girl coordination</a></li>
+      <li><a href="http://platinummgt.co.kr/product/dima/283/category/1/display/4/">man coordination</a></li>
+      <li><a href="http://platinummgt.co.kr/product/andre/481/category/1/display/4/">unisex coordination</a></li>
+      <li><a href="https://platinumstudio.co.kr/PHOTOGRAPHY/view/2013743">베스트</a></li>
+      <li><a href="https://platinumstudio.co.kr/PRODUCT">신상</a></li>
+      <li><a href="https://vinzip.kr/product/list.html?cate_no=24">아우터</a></li>
+      <li><a href="https://vinzip.kr/product/list.html?cate_no=25">티셔츠</a></li>
+      <li><a href="https://vinzip.kr/product/list.html?cate_no=26">팬츠</a></li>
+      <li><a href="http://www.superstari.co.kr/shop/shopbrand.html?xcode=142&type=Y">셔츠</a></li>
+      <li><a href="http://www.superstari.co.kr/shop/shopbrand.html?xcode=010&type=P">수트</a></li>
+      <li><a href="http://www.superstari.co.kr/shop/shopbrand.html?xcode=103&type=Y/shop/shopbrand.html?xcode=119&type=Y">신발</a></li>
+      <li><a href="http://www.superstari.co.kr/shop/shopbrand.html?xcode=002&type=Y">악세 / 가방</a></li>
+      <li id="deactive"><a href="http://www.superstari.co.kr/shop/shopbrand.html?xcode=075&type=P">1+1</a></li>
+      <li><a href="https://www.superstari.co.kr/board/board.html?code=superstari_board10">공지사항</a></li>
+      <li><a href="https://www.superstari.co.kr/board/board.html?code=superstari_image12">상품후기</a></li>
+      span 은 이렇게 ul사용 없이 정렬가능한듯
+    </span>
+    </ul>
+   <div id="article">
+     <a href="https://blog.naver.com/meotpick87/222287689841" target="_blank"><img src="man1.jpg" width=""></a>
+     <a href="https://www.instagram.com/p/Bv5x0nBAv2Y/" target="_blank"><img src="girl1.jpg" width="350px" height="442px"></a>
+     <a href="https://blog.naver.com/rhkdgns0226/221560622523" target="_blank"><img src="girl2.jpg" height="442px" width=""></a>
+     <a href="https://blog.naver.com/yg199595/222219221138" target="_blank"><img src="man2.jpg" height="442px"></a><br>
+     <pre>                  man아메카지                                   girl아메카지룩                                      스트릿girl코디                             스트릿man코디</pre>
+     <div class="ex"><iframe width="560" height="315" src="https://www.youtube.com/embed/8DMLeOR3nRw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                  <iframe width="560" height="315" src="https://www.youtube.com/embed/GtHosD151bU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                  </div>
+
+   </div>
+  </div>
+
+  </body>
+</html>
